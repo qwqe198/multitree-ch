@@ -1,6 +1,6 @@
 // ************ Save stuff ************
 function save() {
-	localStorage.setItem(modInfo.id, btoa(JSON.stringify(player)));
+	localStorage.setItem(modInfo.id, btoa(encodeURIComponent(JSON.stringify(player))));
 }
 function startPlayerBase() {
 	return {
@@ -168,7 +168,7 @@ function load() {
 	if (get === null || get === undefined)
 		player = getStartPlayer();
 	else
-		player = Object.assign(getStartPlayer(), JSON.parse(atob(get)));
+		player = Object.assign(getStartPlayer(), JSON.parse(decodeURIComponent(atob(get))));
 	fixSave();
 
 	if (player.offlineProd) {
@@ -222,7 +222,7 @@ function NaNcheck(data) {
 	}
 }
 function exportSave() {
-	let str = btoa(JSON.stringify(player));
+	let str = decodeURIComponent(JSON.stringify(player));
 
 	const el = document.createElement("textarea");
 	el.value = str;
