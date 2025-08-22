@@ -779,7 +779,7 @@ milestones: [
         return "第3个里程碑基础效果指数^1.0005";
     },
     style() {
-        if(player.tm.buyables[8].gte(16)&&player[极层].best.gte(45)){
+        if(player.tm.buyables[8].gte(16)&&player[this.layer].best.gte(45)){
             return {backgroundColor: "#cccc00"};
         }
         return {};
@@ -791,7 +791,7 @@ milestones: [
     done() {return player[this.layer].best.gte(46)},
     effectDescription: function(){
         if(player.tm.buyables[8].gte(17))return "第3个里程碑基础效果指数^1.001 (已升级)";
-        return "第3个里程碑基础效果指数^极.0005";
+        return "第3个里程碑基础效果指数^1.0005";
     },
     style() {
         if(player.tm.buyables[8].gte(17)&&player[this.layer].best.gte(46)){
