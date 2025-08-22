@@ -1902,6 +1902,7 @@ addLayer("tptc_q", {
                 base=base.mul(tmp.tptr_q.effect);
                 if(player.tptc_ge.challenges[22])base = base.mul(tmp.tptc_ge.challenges[22].rewardEffect);
                 let eff = x.mul(Decimal.pow(base,x.sub(1)));
+if(eff.lt(0))eff=n(0).sub(eff)
                 return eff;
             },
             display() {
@@ -2150,7 +2151,7 @@ addLayer("tptc_m", {
                     ["blank", "5px"],
                         "milestones",
                     ["display-text","施放法术需要1点魔法。法术效果基于你的魔法和符文数量。"],
-                        "可点击项",
+                        "clickables",
                     ["display-text",
                         function() {return '你有 ' + format(player.tptc_m.hexes) + ' 符文，将阻碍精神和特质获取乘以 ' + format(tmp.tptc_m.hexEff) },
                         {}],"upgrades"

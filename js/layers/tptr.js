@@ -2923,7 +2923,7 @@ addLayer("tptr_m", {
         ["display-text",
             function() {return '有效魔法: ' + format(player.tptr_m.points.mul(layers.tptc_m.clickables[16].effect())) + ', 法术强度: '+format(tmp.tptr_m.spellPower.mul(100))+"%"},
                 {}],
-        "可点击项",
+        "clickables",
         ["display-text",
             function() {return '你有 ' + format(player.tptr_m.hexes) + ' 法术印记，'+tmp.tptr_m.hexEffDesc},
                 {}],"upgrades"
@@ -3145,8 +3145,8 @@ addLayer("tptr_ba", {
         "blank",
         "milestones",
         "blank",
-        ["可点击项", 31],
-        ["row", [["可点击项", 21], ["可点击项", 11], "blank", ["进度条", "balanceBar"], "blank", ["可点击项", 12], ["可点击项", 22]]],
+        ["clickables", 31],
+        ["row", [["clickables", 21], ["clickables", 11], "blank", ["bar", "balanceBar"], "blank", ["clickables", 12], ["clickables", 22]]],
         ["row", [
             ["column", [["display-text", function() {return ("+"+format(tmp.tptr_ba.negGain)+"/秒")}, {}], ["display-text", function() {return "负能量: "+format(player.tptr_ba.neg)}, {}], ["display-text", function() {return (("增益: 将每个特质层级乘以"+format(tmp.tptr_ba.negBuff)))}, {}], ["display-text", function() {return tmp.tptr_ba.noNerfs?"":(("削弱: 将正能量增益除以"+format(tmp.tptr_ba.negNerf)))}, {}], "blank", ["row", [["upgrades", 11], ["upgrades", 13]]]], {"max-width": "240px"}], 
             "blank", "blank", "blank", 
