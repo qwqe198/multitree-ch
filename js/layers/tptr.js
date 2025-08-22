@@ -3415,7 +3415,7 @@ addLayer("tptr_ps", {
     powerGain() { return player.tptr_ps.souls.plus(1).times(tmp.tptr_ps.buyables[21].effect) },
     powerExp() { return player.tptr_ps.points.sqrt().times(tmp.tptr_ps.buyables[21].effect) },
     tabFormat: {
-        "主标签页": {
+        "main-display": {
             content: ["main-display",
                 "prestige-button",
                 "resource-display",
