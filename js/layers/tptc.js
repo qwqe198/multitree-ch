@@ -1721,7 +1721,7 @@ addLayer("tptc_h", {
                 "prestige-button", "resource-display",
                 ["blank", "5px"],
                 "milestones",
-                "挑战"
+                "challenges"
             ],
     milestones: {
         0: {
